@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Wildlinge - Individuelle Betreuung</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="//www.eucookie.eu/public/gdpr-cookie-consent.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var cookieConsent = new cookieConsent({
+                clientId: '3ae4528d-2f1d-47b7-a088-cb9facc51f65'        
+            });
+            cookieConsent.run();
+        </script>
+
+           <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script type="text/plain" data-cookie-if="analytical" async src="https://www.googletagmanager.com/gtag/js?id=UA-180794647-1"></script>
+        <script type="text/plain" data-cookie-if="analytical">
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-180794647-1');
+        </script>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Wildlinge</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ml-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        @@navigation_html@@
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading">Willkommen bei Wildlinge!</div>
+                <div class="masthead-heading text-uppercase" style="background-color:rgba(33,33,33,0.5);">Individuelle Betreuung</div>
+            </div>
+        </header>
+      
+
+        <!-- Bewerbung -->
+        <section class="page-section" id="apply">
+            <div class="container">
+                <div class="text-center">
+                    <p style="color:red">@@error_message_text@@</p>
+                    <h2 class="section-heading text-uppercase">Bewerben</h2>
+                    <h3 class="section-subheading text-muted">Hier können Sie sich direkt um einen Betreuungsplatz für Ihr Kind bewerben.</h3>
+                </div>
+                <form id="applicationForm" name="applicationMessage" novalidate="novalidate" method="post" action="index.php#apply">
+                    <input type="hidden" name="action" value="send_application"/>
+                    <input type="hidden" name="page" value="application"/>
+
+                    <div class="row align-items-stretch mb-5">
+                     
+                        <div class="col-12">
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="child_name" placeholder="Name des Kindes *" required="required" data-validation-required-message="Please enter your email address." />
+                                <p class="help-block text-danger"></p>
+                            </div><div class="form-group">
+                                <input class="form-control" type="text" name="child_age" placeholder="Alter des Kindes *" required="required" data-validation-required-message="Please enter your email address." />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text"name="hours_per_month" placeholder="Betreuungsstunden / Monat *" required="required" data-validation-required-message="Please enter your email address." />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="email" name="email" placeholder="Ihre E-Mail Adresse *" required="required" data-validation-required-message="Please enter your email address." />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="siblings" placeholder="Geschwisterkinder / Alter " />
+                                <p class="help-block text-danger"></p>
+                            </div>
+
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <textarea class="form-control" name="interests" placeholder="Interessen des Kindes (Wandern, Klettern, etc) *" required="required" data-validation-required-message="Bitte geben Sie die Interessen Ihres Kindes an."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <textarea class="form-control" name="favorite_toy" placeholder="Lieblingsspielzeug des Kindes (Lego, Puppen, etc) *" required="required" data-validation-required-message="Bitte geben Sie das Lieblingsspielzeug Ihres Kindes an."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <textarea class="form-control" name="character" placeholder="Wie ist das Wesen des Kindes (ängstlich, aggressiv, sensibel, etc) *" required="required" data-validation-required-message="Bitte geben Sie das Wesen Ihres Kindes an."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+
+                            <div class="form-group">
+                                <span style="color:#495057">Impfen Sie Ihr Kind? *</span>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="is_vaccinated" id="inlineRadio1" value="Ja">
+                                    <label class="form-check-label" for="inlineRadio1">Ja</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="is_vaccinated" id="inlineRadio2" value="Nein">
+                                    <label class="form-check-label" for="inlineRadio2">Nein</label>
+                                </div>    
+                            </div> 
+
+                            <div class="form-group">
+                                <span style="color:#495057">Ist Ihr Kind Fremdbetreuung gewöhnt? *</span>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="is_used_to_nursing" id="inlineRadio3" value="Ja">
+                                    <label class="form-check-label" for="inlineRadio3">Ja</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="is_used_to_nursing" id="inlineRadio4" value="Nein">
+                                    <label class="form-check-label" for="inlineRadio4">Nein</label>
+                                </div>    
+                            </div> 
+                        
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <textarea class="form-control" name="other_information" placeholder="Sonstige Informationen"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+
+                        
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <textarea class="form-control" name="message" placeholder="Nachricht"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div id="success"></div>
+                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Bewerbung abschicken</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+       
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-left">Copyright © Bianca Zinner 2020</div>
+            
+                </div>
+            </div>
+        </footer>
+             <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="assets/mail/jqBootstrapValidation.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
